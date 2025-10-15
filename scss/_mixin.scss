@@ -1,0 +1,24 @@
+@mixin Display($items,$justify,$gap){
+    display: flex;
+    align-items: $items;
+    justify-content: $justify;
+    gap: $gap;
+}
+@mixin Textstyle ($CLR,$FW,$FS,$LH,){
+    color: $CLR;
+    font-weight: $FW;
+    font-size: $FS;
+    line-height: $LH;
+    letter-spacing: 0px;
+}
+@mixin Btnstyle ($CLR,$CLR-H){
+    padding: 10px 32px;
+    border: 2px solid $CLR;
+    border-radius: 24px;
+    background-color: transparent;
+    transition: all 0.3s;
+    &:hover{
+        color: $CLR-H;
+        border: 2px solid $CLR-H;
+    }
+}

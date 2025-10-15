@@ -1,0 +1,36 @@
+.red-section {
+    background-color:$clr-pink;
+    padding: 76px 0;
+    background-image: url(/images/png/red-bg.png);
+    background-repeat: no-repeat;
+    background-size: 200px 140px;
+    background-position: left bottom;
+}
+.red {
+    display: flex;
+    justify-content: space-between;
+}
+.red__title {
+    padding-left:130px;
+    @include Textstyle ($CLR: #012F34,$FW: 700,$FS: 48px,$LH: 48px,);
+}
+.red__btn {
+    @include  Btnstyle ($CLR:#012F34,$CLR-H:#79C8C7);
+    @include Textstyle ($CLR: #012F34,$FW: 600,$FS: 18px,$LH: 28px,);
+}
+@media(max-width:780px){
+    .red__title{
+        @include Textstyle ($CLR: #012F34,$FW: 700,$FS: 32px,$LH: 32px,);
+    }
+}
+@media (max-width:560px){
+    .red{
+        display:flex;
+        flex-direction: column;
+        gap: 24px
+    }
+    .red__btn{
+        text-align: center;
+        margin: 0 auto;
+    }
+}

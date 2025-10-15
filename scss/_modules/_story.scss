@@ -1,0 +1,76 @@
+.story-section {
+    padding-top: 140px;
+    padding-bottom: 140px;
+    background-image: url(/images/png/story-top-bg.png),url(/images/png/story-bottom-bg.png);
+    background-repeat: no-repeat;
+    background-size: 147px 100px,200px 100px;
+    background-position: left top,right bottom;
+}
+.story__title-wrapper{
+    text-align: center;
+    margin: 0 auto;
+    width: 932px;
+    margin-bottom: 56px;
+}
+.story__title {
+    text-align: center;
+    @include Textstyle ($CLR: $clr-white,$FW: 700,$FS: 48px,$LH: 48px,);
+}
+.story__title>span{
+    color: #79C8C7;
+}
+.story__list {
+    @include Display($items:center,$justify:space-between,$gap:0px);
+}
+.story__item {
+    width: 350px;
+    text-align: center;
+    padding-top: 35px;
+    background-image: url(/images/png/boritirnoq.png);
+    background-repeat: no-repeat;
+    background-size: 67px 56px;
+    background-position: center top;
+}
+.item__text-1 {
+    @include Textstyle ($CLR: $clr-white,$FW: 600,$FS: 15px,$LH: 25px,);
+    margin-bottom: 24px;
+}
+.item__text-2 {
+    color: c !important;
+    @include Textstyle ($CLR: $clr-white,$FW: 700,$FS: 18px,$LH: 28px,);
+    margin-bottom: 2px;
+}
+.item__text-3 {
+    @include Textstyle ($CLR: $clr-white,$FW: 500,$FS: 13px,$LH: 18px,);
+    margin-bottom: 32px;
+}
+
+@media(max-width:770px){
+    .story__title {
+    text-align: center;
+    @include Textstyle ($CLR: $clr-white,$FW: 700,$FS: 32px,$LH: 32px,);
+    }
+    .story__title-wrapper{
+    text-align: center;
+    margin: 0 auto;
+    width: 573px;
+    margin-bottom: 48px;
+    }
+    .story__list {
+    flex-direction: column;
+    }
+    .story__item{
+        width: 573px;
+    }
+}
+@media(max-width:560px){
+    .story__title-wrapper{
+    text-align: center;
+    margin: 0 auto;
+    width: 327px;
+    margin-bottom: 48px;
+    }
+    .story__item{
+        width: 327px;
+    }
+}

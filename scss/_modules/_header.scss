@@ -1,0 +1,51 @@
+.site-header{
+    padding: 73px 0 129px;
+}
+.header {
+    @include Display($items:center,$justify:space-between,$gap:0px)
+}
+.header__left-wrapper {
+    @include Display($items:center,$justify:start,$gap:80px)
+}
+.header__navbar {
+    @include Display($items:center,$justify:start,$gap:40px)
+}
+.header__menu{
+    display: none;
+}
+.navbar-link {
+    @include Textstyle ($CLR: $clr-white,$FW: 600,$FS: 18px,$LH: 28px,);
+    transition: all 0.3s;
+    &:hover{
+        color: $clr-pink;
+    }
+}
+.header__btn {
+    cursor: pointer;
+    @include Btnstyle($CLR:$clr-white,$CLR-H:$clr-pink);
+    @include Textstyle ($CLR:$clr-white,$FW:600,$FS:18px,$LH:28px,);
+} 
+
+@media (max-width:775px){
+    .logo-img{
+        width: 128px;
+        height: 32px;
+    }
+    .header__left-wrapper {
+        @include Display($items:center,$justify:start,$gap:48px)
+    }
+}
+
+@media (max-width:575px){
+    .navbar-link{
+        display: none;
+    }
+    .header__btn{
+        display: none;
+    }
+    .header__menu{
+        display: block;
+        background: none;
+        border: none;
+    }
+}
