@@ -18,12 +18,16 @@
     @include  Btnstyle ($CLR:#012F34,$CLR-H:#79C8C7);
     @include Textstyle ($CLR: #012F34,$FW: 600,$FS: 18px,$LH: 28px,);
 }
-@media(max-width:780px){
+@media(max-width:840px){
     .red__title{
         @include Textstyle ($CLR: #012F34,$FW: 700,$FS: 32px,$LH: 32px,);
     }
 }
-@media (max-width:560px){
+@media (max-width:666px){
+    .red__title{
+        text-align: center;
+        padding: 0;
+    }
     .red{
         display:flex;
         flex-direction: column;
